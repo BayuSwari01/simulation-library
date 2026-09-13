@@ -38,7 +38,7 @@ Run `lint`, `typecheck` and `check` before declaring work finished.
 `typescript@6`
 
 Runtime dependencies are only: `next`, `react`, `react-dom`, `next-themes`,
-`clsx`, `tailwind-merge`. Keep it that way.
+`clsx`, `tailwind-merge`, `@vercel/analytics`. Keep it that way.
 
 **Prohibited dependencies:**
 - **React Flow / xyflow**: Use hand-written SVG instead.

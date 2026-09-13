@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { notFound } from 'next/navigation'
+import { Analytics } from '@vercel/analytics/next'
 import { Spectral, Inter, IBM_Plex_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/layout/theme-provider'
 import { PaperTexture } from '@/components/layout/paper-texture'
@@ -80,6 +81,7 @@ export default async function LocaleLayout(props: {
             <SiteFooter dict={dict} />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   )

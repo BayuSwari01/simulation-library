@@ -61,9 +61,10 @@ Entries marked *Coming soon* are listed in the library but cannot be opened yet.
 | Styling | [Tailwind CSS 4](https://tailwindcss.com) |
 | Theming | [next-themes](https://github.com/pacocoursey/next-themes) |
 | Language | [TypeScript 6](https://www.typescriptlang.org) |
+| Analytics | [Vercel Web Analytics](https://vercel.com/docs/analytics) |
 
-The project has six runtime dependencies: `next`, `react`, `react-dom`, `next-themes`,
-`clsx` and `tailwind-merge`.
+The project has seven runtime dependencies: `next`, `react`, `react-dom`, `next-themes`,
+`clsx`, `tailwind-merge` and `@vercel/analytics`.
 
 ## Getting started
 
@@ -223,6 +224,10 @@ The full technical checklist, including the rules every engine must follow, is i
 
 The project is built for deployment on [Vercel](https://vercel.com). Every page is
 statically prerendered, so there is no server runtime to operate.
+
+Visitor analytics use Vercel Web Analytics. Enable it once in the Vercel dashboard
+(project → **Analytics** → **Enable**), then redeploy. Nothing is collected in
+`npm run dev` — only on Vercel deployments.
 
 To produce and preview a production build locally:
 
