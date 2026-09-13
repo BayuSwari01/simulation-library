@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "name": "Simulation Library",
+    "tagline": "Watch how things actually work"
+  },
+  "nav": {
+    "home": "Home",
+    "library": "Library",
+    "skipToContent": "Skip to content"
+  },
+  "theme": {
+    "label": "Theme",
+    "toLight": "Switch to light theme",
+    "toDark": "Switch to dark theme"
+  },
+  "locale": {
+    "label": "Language"
+  },
+  "landing": {
+    "eyebrow": "An open shelf of moving diagrams",
+    "title": "Concepts you can watch, not just read about",
+    "lede": "Load balancers, consensus, distributed systems. Each entry is a small animated model you can pause, step through, and replay — built to make an idea click in a minute, not an afternoon.",
+    "cta": "Browse the library",
+    "ctaHint": "No account, nothing to install.",
+    "howTitle": "How it works",
+    "how": [
+      {
+        "title": "Pick a concept",
+        "body": "Search the shelves or filter by subject and depth. Every entry says up front what it will show you."
+      },
+      {
+        "title": "Watch it run",
+        "body": "Each model animates in real time. Slow it down, speed it up, or step one tick at a time."
+      },
+      {
+        "title": "Replay it exactly",
+        "body": "Every run is seeded, so resetting replays the same run. Nothing is hidden behind randomness you cannot repeat."
+      }
+    ],
+    "featuredTitle": "From the shelves",
+    "featuredCta": "See all entries"
+  },
+  "library": {
+    "title": "The Library",
+    "lede": "Every simulation on the shelves, arranged by subject.",
+    "searchLabel": "Search entries",
+    "searchPlaceholder": "Search by title, subject, or tag…",
+    "categoryLabel": "Subject",
+    "difficultyLabel": "Depth",
+    "allCategories": "All subjects",
+    "allDifficulties": "Any depth",
+    "clear": "Clear filters",
+    "resultCountOne": "1 entry",
+    "resultCountMany": "{n} entries",
+    "emptyTitle": "Nothing on this shelf",
+    "emptyBody": "No entry matches those filters. Try a broader search or clear the filters.",
+    "comingSoon": "In preparation",
+    "open": "Open"
+  },
+  "categories": {
+    "distributed-systems": "Distributed Systems",
+    "networking": "Networking",
+    "blockchain": "Blockchain",
+    "algorithms": "Algorithms"
+  },
+  "difficulty": {
+    "intro": "Introductory",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "sim": {
+    "play": "Play",
+    "pause": "Pause",
+    "reset": "Reset",
+    "stepOnce": "Step once",
+    "speed": "Speed",
+    "elapsed": "Elapsed",
+    "legend": "Legend",
+    "metrics": "Readings",
+    "parameters": "Settings",
+    "backToLibrary": "Back to the library",
+    "scrollHint": "Scroll sideways to see the whole stage",
+    "reducedMotion": "Your system asks for reduced motion, so this model does not start on its own. Press play when you are ready.",
+    "complete": "Run complete"
+  },
+  "footer": {
+    "note": "A growing shelf of animated explanations."
+  },
+  "notFound": {
+    "title": "Not on the shelves",
+    "body": "That entry does not exist, or has not been written yet.",
+    "cta": "Back to the library"
+  }
+}

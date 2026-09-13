@@ -1,0 +1,78 @@
+{
+  "slug": "load-balancer",
+  "category": "distributed-systems",
+  "difficulty": "intro",
+  "status": "ready",
+  "tags": [
+    "load balancing",
+    "round robin",
+    "queue",
+    "latency",
+    "throughput",
+    "scaling"
+  ],
+  "en": {
+    "title": "Load Balancer",
+    "blurb": "One entrance, several servers behind it. Watch how the balancer decides where each request goes — and what happens to latency and dropped traffic when you change that decision.",
+    "labels": {
+      "client": "Incoming",
+      "balancer": "Balancer",
+      "serverPrefix": "server",
+      "strategyLabel": "Strategy",
+      "serverCount": "Servers",
+      "arrivalRate": "Traffic",
+      "serviceTime": "Work per request",
+      "queueLimit": "Queue limit",
+      "unitPerSecond": "/s",
+      "unitSeconds": "s",
+      "legendTransit": "In transit",
+      "legendQueued": "Waiting in queue",
+      "legendServing": "Being handled",
+      "legendDone": "Completed",
+      "legendRejected": "Rejected — queue full",
+      "metricArrived": "Arrived",
+      "metricCompleted": "Completed",
+      "metricRejected": "Rejected",
+      "metricLatency": "Avg latency",
+      "metricThroughput": "Throughput",
+      "metricUtilisation": "Utilisation",
+      "strategies": {
+        "round-robin": "Round robin",
+        "least-connections": "Least connections",
+        "random": "Random"
+      }
+    }
+  },
+  "id": {
+    "title": "Load Balancer",
+    "blurb": "Satu pintu masuk, beberapa server di belakangnya. Lihat bagaimana balancer memutuskan setiap permintaan diarahkan ke mana — dan apa yang terjadi pada latensi serta permintaan yang ditolak saat keputusan itu diubah.",
+    "labels": {
+      "client": "Masuk",
+      "balancer": "Balancer",
+      "serverPrefix": "server",
+      "strategyLabel": "Strategi",
+      "serverCount": "Jumlah server",
+      "arrivalRate": "Lalu lintas",
+      "serviceTime": "Kerja per permintaan",
+      "queueLimit": "Batas antrean",
+      "unitPerSecond": "/dtk",
+      "unitSeconds": "dtk",
+      "legendTransit": "Dalam perjalanan",
+      "legendQueued": "Menunggu di antrean",
+      "legendServing": "Sedang dikerjakan",
+      "legendDone": "Selesai",
+      "legendRejected": "Ditolak — antrean penuh",
+      "metricArrived": "Datang",
+      "metricCompleted": "Selesai",
+      "metricRejected": "Ditolak",
+      "metricLatency": "Latensi rata-rata",
+      "metricThroughput": "Throughput",
+      "metricUtilisation": "Pemakaian",
+      "strategies": {
+        "round-robin": "Round robin",
+        "least-connections": "Koneksi tersedikit",
+        "random": "Acak"
+      }
+    }
+  }
+}

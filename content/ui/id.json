@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "name": "Simulation Library",
+    "tagline": "Lihat cara kerjanya, bukan cuma baca"
+  },
+  "nav": {
+    "home": "Beranda",
+    "library": "Perpustakaan",
+    "skipToContent": "Lompat ke konten"
+  },
+  "theme": {
+    "label": "Tema",
+    "toLight": "Ganti ke tema terang",
+    "toDark": "Ganti ke tema gelap"
+  },
+  "locale": {
+    "label": "Bahasa"
+  },
+  "landing": {
+    "eyebrow": "Rak terbuka berisi diagram yang bergerak",
+    "title": "Konsep yang bisa ditonton, bukan sekadar dibaca",
+    "lede": "Load balancer, konsensus, sistem terdistribusi. Setiap entri adalah model animasi kecil yang bisa dijeda, dimajukan setahap, dan diputar ulang — dibuat agar sebuah ide masuk dalam semenit, bukan seharian.",
+    "cta": "Buka perpustakaan",
+    "ctaHint": "Tanpa akun, tanpa instalasi.",
+    "howTitle": "Cara pakainya",
+    "how": [
+      {
+        "title": "Pilih konsepnya",
+        "body": "Telusuri rak atau saring berdasarkan bidang dan kedalaman. Tiap entri menyebutkan di depan apa yang akan ditunjukkan."
+      },
+      {
+        "title": "Tonton jalannya",
+        "body": "Tiap model beranimasi secara langsung. Perlambat, percepat, atau majukan satu tahap sekali waktu."
+      },
+      {
+        "title": "Putar ulang persis sama",
+        "body": "Tiap jalannya simulasi memakai seed, jadi tombol reset mengulang jalan yang sama. Tidak ada yang disembunyikan di balik keacakan yang tak bisa diulang."
+      }
+    ],
+    "featuredTitle": "Dari rak",
+    "featuredCta": "Lihat semua entri"
+  },
+  "library": {
+    "title": "Perpustakaan",
+    "lede": "Semua simulasi di rak, tersusun menurut bidangnya.",
+    "searchLabel": "Cari entri",
+    "searchPlaceholder": "Cari judul, bidang, atau tag…",
+    "categoryLabel": "Bidang",
+    "difficultyLabel": "Kedalaman",
+    "allCategories": "Semua bidang",
+    "allDifficulties": "Semua kedalaman",
+    "clear": "Hapus filter",
+    "resultCountOne": "1 entri",
+    "resultCountMany": "{n} entri",
+    "emptyTitle": "Rak ini kosong",
+    "emptyBody": "Tidak ada entri yang cocok dengan filter itu. Coba pencarian yang lebih luas atau hapus filternya.",
+    "comingSoon": "Sedang disiapkan",
+    "open": "Buka"
+  },
+  "categories": {
+    "distributed-systems": "Sistem Terdistribusi",
+    "networking": "Jaringan",
+    "blockchain": "Blockchain",
+    "algorithms": "Algoritma"
+  },
+  "difficulty": {
+    "intro": "Pengantar",
+    "intermediate": "Menengah",
+    "advanced": "Lanjutan"
+  },
+  "sim": {
+    "play": "Jalankan",
+    "pause": "Jeda",
+    "reset": "Ulang",
+    "stepOnce": "Maju satu tahap",
+    "speed": "Kecepatan",
+    "elapsed": "Waktu berjalan",
+    "legend": "Keterangan",
+    "metrics": "Bacaan",
+    "parameters": "Pengaturan",
+    "backToLibrary": "Kembali ke perpustakaan",
+    "scrollHint": "Geser ke samping untuk melihat seluruh panggung",
+    "reducedMotion": "Sistem Anda meminta pengurangan animasi, jadi model ini tidak berjalan sendiri. Tekan jalankan kalau sudah siap.",
+    "complete": "Simulasi selesai"
+  },
+  "footer": {
+    "note": "Rak penjelasan beranimasi yang terus bertambah."
+  },
+  "notFound": {
+    "title": "Tidak ada di rak",
+    "body": "Entri itu tidak ada, atau memang belum ditulis.",
+    "cta": "Kembali ke perpustakaan"
+  }
+}

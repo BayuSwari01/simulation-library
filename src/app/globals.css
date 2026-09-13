@@ -1,0 +1,218 @@
+@import 'tailwindcss';
+
+/* ---------------------------------------------------------------------------
+   Class-based dark mode.
+   Tailwind v4 has no `darkMode` config option and defaults to
+   prefers-color-scheme. This line is what makes next-themes'
+   `attribute="class"` actually work. Do not remove it.
+--------------------------------------------------------------------------- */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------------------------------------------------------------------------
+   PALETTE — raw values only.
+
+   Light  = aged, slightly yellowed paper under daylight.
+   Dark   = the same library at night: deep warm brown-black, parchment ink,
+            lamplight amber. Never a cold blue-grey dashboard dark.
+
+   These are raw CSS variables. They generate NO utilities on their own —
+   the @theme inline block below is what turns them into Tailwind colour
+   utilities (bg-, text-, border-, fill-, stroke-).
+--------------------------------------------------------------------------- */
+:root {
+  /* surfaces, from recessed to raised */
+  --paper-sunk: oklch(0.909 0.024 83);
+  --paper-base: oklch(0.945 0.019 85);
+  --paper-card: oklch(0.969 0.013 87);
+  --paper-raised: oklch(0.986 0.008 90);
+
+  /* ink */
+  --ink-strong: oklch(0.252 0.023 55);
+  --ink-base: oklch(0.335 0.023 57);
+  --ink-muted: oklch(0.492 0.024 60);
+  --ink-faint: oklch(0.638 0.021 65);
+
+  /* rules / borders — like faint pencil lines */
+  --rule-soft: oklch(0.858 0.021 80);
+  --rule-base: oklch(0.806 0.026 78);
+  --rule-strong: oklch(0.700 0.031 75);
+
+  /* accents */
+  --accent-base: oklch(0.455 0.092 245); /* faded fountain-pen blue */
+  --accent-hover: oklch(0.395 0.098 245);
+  --accent-wash: oklch(0.905 0.033 240);
+  --accent-on: oklch(0.985 0.006 250); /* text on top of accent */
+
+  --lamp-base: oklch(0.640 0.118 72); /* ochre / aged stain */
+  --lamp-wash: oklch(0.916 0.045 82);
+
+  --annotation: oklch(0.512 0.152 32); /* red pencil */
+
+  /* simulation semantics — must stay legible in both themes */
+  --sim-idle: oklch(0.660 0.020 70);
+  --sim-active: oklch(0.455 0.092 245);
+  --sim-ok: oklch(0.505 0.098 152);
+  --sim-warn: oklch(0.618 0.128 72);
+  --sim-danger: oklch(0.512 0.152 32);
+  --sim-grid: oklch(0.862 0.020 80);
+
+  /* paper texture tuning */
+  --grain-opacity: 0.05;
+  --grain-blend: multiply;
+  --vignette-strength: 0.055;
+}
+
+.dark {
+  --paper-sunk: oklch(0.142 0.010 58);
+  --paper-base: oklch(0.178 0.012 60);
+  --paper-card: oklch(0.218 0.014 62);
+  --paper-raised: oklch(0.258 0.016 64);
+
+  --ink-strong: oklch(0.928 0.021 84);
+  --ink-base: oklch(0.868 0.022 82);
+  --ink-muted: oklch(0.712 0.022 78);
+  --ink-faint: oklch(0.548 0.020 72);
+
+  --rule-soft: oklch(0.282 0.014 64);
+  --rule-base: oklch(0.338 0.016 66);
+  --rule-strong: oklch(0.452 0.020 68);
+
+  --accent-base: oklch(0.735 0.098 245); /* ink, lifted for dark ground */
+  --accent-hover: oklch(0.805 0.088 245);
+  --accent-wash: oklch(0.312 0.048 245);
+  --accent-on: oklch(0.165 0.014 250);
+
+  --lamp-base: oklch(0.798 0.126 78); /* candlelight */
+  --lamp-wash: oklch(0.318 0.052 72);
+
+  --annotation: oklch(0.672 0.148 32);
+
+  --sim-idle: oklch(0.505 0.018 70);
+  --sim-active: oklch(0.735 0.098 245);
+  --sim-ok: oklch(0.712 0.118 152);
+  --sim-warn: oklch(0.798 0.126 78);
+  --sim-danger: oklch(0.672 0.148 32);
+  --sim-grid: oklch(0.298 0.014 66);
+
+  --grain-opacity: 0.032;
+  --grain-blend: soft-light;
+  --vignette-strength: 0.28;
+}
+
+/* ---------------------------------------------------------------------------
+   TOKENS -> UTILITIES
+
+   `inline` is REQUIRED here: these values are var() references that change
+   between :root and .dark. Without `inline`, Tailwind resolves them once at
+   :root and the .dark override silently does nothing.
+--------------------------------------------------------------------------- */
+@theme inline {
+  --color-sunk: var(--paper-sunk);
+  --color-paper: var(--paper-base);
+  --color-card: var(--paper-card);
+  --color-raised: var(--paper-raised);
+
+  --color-ink: var(--ink-base);
+  --color-ink-strong: var(--ink-strong);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+
+  --color-rule-soft: var(--rule-soft);
+  --color-rule: var(--rule-base);
+  --color-rule-strong: var(--rule-strong);
+
+  --color-accent: var(--accent-base);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-wash: var(--accent-wash);
+  --color-accent-on: var(--accent-on);
+
+  --color-lamp: var(--lamp-base);
+  --color-lamp-wash: var(--lamp-wash);
+  --color-annotation: var(--annotation);
+
+  --color-sim-idle: var(--sim-idle);
+  --color-sim-active: var(--sim-active);
+  --color-sim-ok: var(--sim-ok);
+  --color-sim-warn: var(--sim-warn);
+  --color-sim-danger: var(--sim-danger);
+  --color-sim-grid: var(--sim-grid);
+
+  --font-serif: var(--font-spectral), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, 'Cascadia Code', monospace;
+}
+
+/* --------------------------------------------------------------------------- */
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-ink-strong);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-wash);
+    color: var(--color-ink-strong);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Numbers in metrics must not jitter while a simulation runs. */
+  .tabular {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum';
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Paper texture. Generated, not an image asset.
+--------------------------------------------------------------------------- */
+.paper-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  mix-blend-mode: var(--grain-blend);
+}
+
+.paper-vignette {
+  background: radial-gradient(
+    120% 90% at 50% 40%,
+    transparent 55%,
+    color-mix(in oklab, var(--ink-strong) calc(var(--vignette-strength) * 100%), transparent) 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
