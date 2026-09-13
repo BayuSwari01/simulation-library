@@ -85,5 +85,34 @@ check(
 
 /* ---------------------------------------------------------------- */
 
+console.log('\nbasic-blockchain')
+
+import { basicBlockchainEngine } from '@/simulations/basic-blockchain/engine'
+import { defaultBlockchainConfig } from '@/simulations/basic-blockchain/config'
+
+function runBc(seed: number, ticks: number, ticksPerFrame = 1) {
+  let state = basicBlockchainEngine.createInitialState(defaultBlockchainConfig, seed)
+  let done = 0
+  while (done < ticks) {
+    const batch = Math.min(ticksPerFrame, ticks - done)
+    for (let i = 0; i < batch; i += 1) state = basicBlockchainEngine.step(state, FIXED_DT)
+    done += batch
+  }
+  return {
+    blocks: state.blocks.length,
+    lastId: state.blocks[state.blocks.length - 1]?.id,
+    lastHash: state.blocks[state.blocks.length - 1]?.hash
+  }
+}
+
+const bcBaseline = runBc(12345, 1800)
+const bcReplay = runBc(12345, 1800)
+check('same seed replays identically (bc)', signature(bcBaseline) === signature(bcReplay))
+
+const bcBatched = runBc(12345, 1800, 8)
+check('batching ticks changes nothing (bc)', signature(bcBaseline) === signature(bcBatched))
+
+/* ---------------------------------------------------------------- */
+
 console.log(failures === 0 ? '\nall engine checks passed\n' : `\n${failures} check(s) failed\n`)
 process.exit(failures === 0 ? 0 : 1)

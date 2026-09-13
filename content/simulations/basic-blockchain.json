@@ -1,0 +1,40 @@
+{
+  "slug": "basic-blockchain",
+  "category": "distributed-systems",
+  "difficulty": "intro",
+  "status": "ready",
+  "tags": [
+    "blockchain",
+    "hash",
+    "immutability",
+    "linked-list"
+  ],
+  "en": {
+    "title": "Basic Blockchain",
+    "blurb": "A simple blockchain where each block stores data and the hash of the previous block. See how changing one block invalidates all the blocks after it.",
+    "labels": {
+      "addData": "Add Block",
+      "tamper": "Tamper Block",
+      "recalculate": "Recalculate Hash",
+      "dataLabel": "Data",
+      "hashLabel": "Hash",
+      "prevHashLabel": "Prev",
+      "valid": "Valid",
+      "invalid": "Invalid"
+    }
+  },
+  "id": {
+    "title": "Basic Blockchain",
+    "blurb": "Blockchain sederhana di mana setiap blok menyimpan data dan hash dari blok sebelumnya. Lihat bagaimana mengubah satu blok membuat semua blok setelahnya menjadi tidak valid.",
+    "labels": {
+      "addData": "Tambah Blok",
+      "tamper": "Ubah Data",
+      "recalculate": "Hitung Ulang",
+      "dataLabel": "Data",
+      "hashLabel": "Hash",
+      "prevHashLabel": "Sblm",
+      "valid": "Valid",
+      "invalid": "Tdk Valid"
+    }
+  }
+}

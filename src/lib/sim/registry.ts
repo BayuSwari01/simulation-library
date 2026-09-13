@@ -8,6 +8,7 @@ import type {
 } from './types'
 import type { Dictionary, Locale } from '@/i18n'
 import loadBalancer from '@content/simulations/load-balancer.json'
+import basicBlockchain from '@content/simulations/basic-blockchain.json'
 
 export interface SimulationViewProps {
   dict: Dictionary
@@ -22,7 +23,7 @@ export interface SimulationViewProps {
  * static imports to bundle the JSON for Client Components — `library-browser`
  * reads this list in the browser to drive search and filtering.
  */
-const contents: SimulationContent[] = [loadBalancer]
+const contents: SimulationContent[] = [loadBalancer, basicBlockchain]
 
 /**
  * Narrows the widened JSON strings into the unions the app uses.
@@ -45,6 +46,7 @@ export const simulations: SimulationMeta[] = contents.map(toSimulationMeta)
 /** Lazily loaded views, so a page ships only the simulation it shows. */
 const views: Record<string, ComponentType<SimulationViewProps>> = {
   'load-balancer': dynamic(() => import('@/simulations/load-balancer/view')),
+  'basic-blockchain': dynamic(() => import('@/simulations/basic-blockchain/view')),
 }
 
 export function getSimulationMeta(slug: string): SimulationMeta | undefined {
